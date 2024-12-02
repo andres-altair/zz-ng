@@ -1,0 +1,10 @@
+
+<h2>Tareas Creadas</h2>
+<ul>
+  <li *ngFor="let tarea of tareas">
+    <strong>ID:</strong> {{ tarea.id }} <br>
+    <strong>Nombre:</strong> {{ tarea.nombre }} <br>
+    <strong>Descripción:</strong> {{ tarea.descripcion }} <br>
+    <strong>Completado:</strong> {{ tarea.completado ? 'Sí' : 'No' }} <br>
+  </li>
+</ul>
