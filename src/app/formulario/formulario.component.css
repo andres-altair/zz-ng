@@ -26,21 +26,21 @@ div {
   /* Estilo para los campos de entrada */
   mat-form-field {
     width: 100%; /* Asegura que los campos ocupen todo el ancho del contenedor */
-    margin-bottom: 16px; /* Espaciado inferior entre los campos */
+    margin: 16px; /* Espaciado inferior entre los campos */
   }
-  
+
 /* Estilo para el botón */
 button {
     width: 100%; /* Asegura que el botón ocupe todo el ancho del contenedor */
     margin-top: 10px; /* Espaciado superior */
-    background-color: #ff0000; /* Color de fondo oscuro */
-    color: #501f1f; /* Color del texto blanco */
+    background-color: #000000; /* Color de fondo oscuro */
+    color: #ffffff; /* Color del texto blanco */
     border: none; /* Sin borde */
     border-radius: 4px; /* Bordes redondeados */
     padding: 10px; /* Espaciado interno */
     font-size: 16px; /* Tamaño de fuente */
     cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+    transition: background-color 0.9s ease; /* Transición suave para el cambio de color */
   }
   
   /* Efecto hover para el botón */
