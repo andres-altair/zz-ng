@@ -5,12 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { Tarea } from '../model/tarea';
 import { ServicioService } from '../servicio.service';
 import { catchError, of } from 'rxjs';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { NgIf } from '@angular/common';
 
 
 @Component({
   selector: 'app-formulario',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, MatInputModule, MatButtonModule,NgIf],
   templateUrl: './formulario.component.html',
   styleUrl: './formulario.component.css'
 })
@@ -27,10 +30,17 @@ export class FormularioComponent {
 
   mensaje: string = '';
   @Output() tareaAgregada = new EventEmitter<Tarea>();
+
+  // Propiedades enlazadas a los campos de entrada
   nombre: string = '';
   descripcion: string = '';
 
   agregarTarea(): void {
+    if (!this.nombre || !this.descripcion) {
+      this.mensaje = 'Por favor, complete todos los campos.';
+      return;
+    }
+
     const nuevaTarea: Omit<Tarea, 'id'> = {
       nombre: this.nombre,
       descripcion: this.descripcion,

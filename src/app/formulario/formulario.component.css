@@ -1,0 +1,49 @@
+/* Estilo general para el contenedor del formulario */
+div {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centra el formulario en la página */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    background-color: #ffffff; /* Fondo blanco */
+  }
+  
+  /* Estilo para el título del formulario */
+  h2 {
+    text-align: center; /* Centra el texto del título */
+    color: #3f51b5; /* Color del texto del título */
+    margin-bottom: 20px; /* Espaciado inferior */
+  }
+  
+  /* Estilo para los mensajes */
+  p {
+    text-align: center; /* Centra el texto del mensaje */
+    color: #f44336; /* Color rojo para mensajes de error */
+    font-weight: bold; /* Negrita para destacar el mensaje */
+    margin-top: 15px; /* Espaciado superior */
+  }
+  
+  /* Estilo para los campos de entrada */
+  mat-form-field {
+    width: 100%; /* Asegura que los campos ocupen todo el ancho del contenedor */
+    margin-bottom: 16px; /* Espaciado inferior entre los campos */
+  }
+  
+/* Estilo para el botón */
+button {
+    width: 100%; /* Asegura que el botón ocupe todo el ancho del contenedor */
+    margin-top: 10px; /* Espaciado superior */
+    background-color: #ff0000; /* Color de fondo oscuro */
+    color: #501f1f; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+  }
+  
+  /* Efecto hover para el botón */
+  button:hover {
+    background-color: #1e88e5; /* Color azulado al pasar el mouse */
+  }

@@ -1,27 +1,17 @@
-<h3>Agregar Tarea</h3>
-
-<form (ngSubmit)="agregarTarea()" #tareaForm="ngForm">
-    <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input 
-            [(ngModel)]="nombre" 
-            type="text" 
-            class="form-control" 
-            id="nombre" 
-            name="nombre" 
-            required>
-    </div>
-   
-    <div class="mb-3">
-        <label for="descripcion" class="form-label">Descripción</label>
-        <input 
-            [(ngModel)]="descripcion" 
-            type="text" 
-            class="form-control" 
-            id="descripcion" 
-            name="descripcion" 
-            required>
-    </div>
-
-    <button type="submit" [disabled]="tareaForm.invalid">Agregar</button>
-</form>
+<div>
+    <h2>Agregar Tarea</h2>
+    <form (ngSubmit)="agregarTarea()">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre de la tarea</mat-label>
+        <input placeholder="Escribe aquí..." matInput [(ngModel)]="nombre" name="nombre" required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Descripción</mat-label>
+        <input matInput [(ngModel)]="descripcion" name="descripcion" required />
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Agregar Tarea</button>
+    </form>
+    <p *ngIf="mensaje">{{ mensaje }}</p>
+  </div>

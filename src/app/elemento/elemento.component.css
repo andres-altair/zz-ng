@@ -1,0 +1,75 @@
+/* elemento.component.css */
+
+/* Estilo para el contenedor de la lista */
+mat-list {
+  background-color: #6ea367; /* Color de fondo para la lista */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  padding: 16px; /* Espaciado interno */
+  margin: 5pt auto; /* Centrar el contenedor horizontalmente */
+  width: 50%; /* Ancho del contenedor */
+}
+
+/* Estilo para cada elemento de la lista */
+mat-list-item {
+  padding: 10px; /* Espaciado interno para cada elemento */
+  border-bottom: 1px solid #ccc; /* Línea divisoria entre elementos de la lista */
+}
+
+/* Contenedor de la tarea */
+.tarea-container {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columnas */
+  align-items: center; /* Centra el nombre de la tarea */
+}
+
+/* Estilo para el nombre de la tarea */
+.tarea-nombre {
+  font-size: 20px; /* Tamaño de fuente para el nombre */
+  font-weight: bold; /* Negrita para el nombre */
+  color: #000000; /* Color del texto */
+  width: 100%; /* Asegura que el nombre ocupe todo el ancho */
+  text-align: center; /* Centra el texto del nombre */
+}
+
+/* Estilo para la descripción de la tarea */
+.tarea-descripcion {
+  font-size: 16px; /* Tamaño de fuente para la descripción */
+  color: #000000; /* Color del texto */
+  margin-bottom: 8px; /* Espaciado entre la descripción y los botones */
+  text-align: left; /* Alinea el texto de la descripción a la izquierda */
+  width: 100%; /* Asegura que la descripción ocupe todo el ancho */
+}
+
+/* Contenedor para los botones */
+.botones-container {
+  display: flex; /* Para alinear los botones en línea */
+  justify-content: center; /* Centra los botones horizontalmente */
+  margin-top: 8px; /* Espaciado superior para separar los botones de la descripción */
+}
+
+/* Estilo para los botones */
+button {
+  margin-left: 8px; /* Espaciado entre botones */
+  transform: scale(0.9); /* Reduce el tamaño del botón al 90% */
+  transition: transform 0.2s; /* Transición suave para el efecto de hover */
+}
+
+/* Estilo para el botón de eliminar */
+button[color="warn"] {
+  background-color: #f44336; /* Color de fondo para el botón de eliminar */
+  color: white; /* Color del texto */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Estilo para el botón de actualizar */
+button[color="primary"] {
+  background-color: #3f51b5; /* Color de fondo para el botón de actualizar */
+  color: white; /* Color del texto */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Efecto hover para los botones */
+button:hover {
+  transform: scale(1.1); /* Mantiene el tamaño reducido al pasar el mouse */
+}

@@ -1,5 +1,12 @@
-<li>
-  <span>{{ tarea.nombre }} - {{ tarea.completada ? 'Completada' : 'Pendiente' }}</span>
-  <button (click)="eliminar()">Eliminar</button>
-  <button (click)="actualizar()">Actualizar</button>
-</li>
+<mat-list>
+  <mat-list-item>
+    <div class="tarea-container">
+      <span class="tarea-nombre">{{ tarea.nombre }}</span>
+      <span class="tarea-descripcion">{{ tarea.descripcion }}</span>
+      <div class="botones-container">
+        <button mat-button color="warn" (click)="eliminar()">Eliminar</button>
+        <button mat-button color="primary" (click)="actualizar()">Actualizar</button>
+      </div>
+    </div>
+  </mat-list-item>
+</mat-list>
