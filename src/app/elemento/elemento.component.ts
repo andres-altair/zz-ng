@@ -1,4 +1,4 @@
-import { Component, EventEmitter, model, Output } from '@angular/core';
+import { Component, EventEmitter, Input, model, Output } from '@angular/core';
 import { Tarea } from '../model/tarea';
 import { NgForm, NgModel } from '@angular/forms';
 import { NgFor } from '@angular/common';
@@ -11,11 +11,15 @@ import { NgFor } from '@angular/common';
   styleUrl: './elemento.component.css'
 })
 export class ElementoComponent {
-  tareas: Tarea[] = [];
-  private idCounter: number = 1;
+  @Input() tarea!: Tarea; // Recibe la tarea
+  @Output() tareaEliminada = new EventEmitter<Tarea>(); // Emite la tarea eliminada
+  @Output() tareaActualizada = new EventEmitter<Tarea>(); // Emite la tarea actualizada
 
-  agregarTarea(tarea: Omit<Tarea, 'id'>) {
-    const nuevaTarea: Tarea = { id: this.idCounter++, ...tarea };
-    this.tareas.push(nuevaTarea);
+  eliminar() {
+    this.tareaEliminada.emit(this.tarea); // Emite la tarea completa al eliminar
+  }
+
+  actualizar() {
+    this.tareaActualizada.emit(this.tarea); // Emite la tarea para actualizar
   }
 }

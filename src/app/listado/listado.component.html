@@ -1,8 +1,20 @@
 <h2>Lista de Tareas</h2>
-<ul>
-  <li *ngFor="let tarea of tareas">
-    <input type="checkbox" [checked]="tarea.completada" (change)="actualizarTarea(tarea)">
-    {{ tarea.nombre }} - {{ tarea.descripcion }} - Completado: {{ tarea.completada }}
-    <button (click)="eliminarTarea(tarea.id)">Eliminar</button>
-  </li>
+<div *ngIf="mensaje">
+  <p>{{ mensaje }}</p>
+</div>
+<!-- Mensaje si no hay tareas -->
+<div *ngIf="tareas.length === 0">
+  <p>No hay tareas disponibles.</p>
+</div>
+
+<!-- Lista de tareas -->
+<ul *ngIf="tareas.length > 0">
+  <app-elemento *ngFor="let tarea of tareas" 
+                   [tarea]="tarea" 
+                (tareaEliminada)="eliminarTarea(tarea)"
+                (tareaActualizada)="actualizarTarea($event)">
+  </app-elemento>
 </ul>
+<mat-card>
+  <mat-card-content>Simple card</mat-card-content>
+</mat-card>

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Tarea } from './model/tarea';
 import { catchError, Observable, throwError } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -9,7 +9,8 @@ import { HttpClient } from '@angular/common/http';
 export class ServicioService {
   private url = 'http://localhost:3000/tareas'; // Cambia a la ruta correcta
 
-  constructor(private http: HttpClient) {}
+
+  private http = inject(HttpClient);
 
   obtenerTareas(): Observable<Tarea[]> {
     return this.http.get<Tarea[]>(this.url).pipe(
