@@ -1,20 +1,17 @@
 <div>
-    <h2>Agregar Tarea</h2>
-    <form (ngSubmit)="agregarTarea()">
-      <mat-form-field appearance="fill">
-        <mat-label>Nombre de la tarea</mat-label>
-        <input placeholder="Escribe aquí..." matInput [(ngModel)]="nombre" name="nombre" required />
-      </mat-form-field>
-  
-      <mat-form-field appearance="fill">
-        <mat-label>Descripción</mat-label>
-        <input matInput [(ngModel)]="descripcion" name="descripcion" required />
-      </mat-form-field>
-  
-      <button mat-raised-button color="primary" type="submit">Agregar Tarea</button>
-    </form>
-    <p *ngIf="mensaje">{{ mensaje }}</p>
-  </div>
+  <h2>Agregar Tarea</h2>
+  <form (ngSubmit)="agregarTarea()">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre de la tarea</mat-label>
+      <input matInput [(ngModel)]="nombre" name="nombre" required />
+    </mat-form-field>
 
-
-  
+    <mat-form-field appearance="outline" class="full-width" >
+      <mat-label>Descripción</mat-label>
+      <textarea matInput [(ngModel)]="descripcion" name="descripcion" required></textarea>
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary" type="submit">Agregar Tarea</button>
+  </form>
+  <p *ngIf="mensaje">{{ mensaje }}</p>
+</div>

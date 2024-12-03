@@ -1,0 +1,15 @@
+
+
+.nav-links {
+  margin: 40px;
+  display: flex;
+  justify-content: center; /* Centra los enlaces horizontalmente */
+  flex: 1; /* Permite que el contenedor ocupe el espacio disponible */
+}
+
+.router-link-active {
+  background-color: rgb(238, 253, 254);
+  font-size: 20px;
+  font-weight: bold; /* Estilo para el enlace activo */
+  text-decoration: underline; /* Subrayar el enlace activo */
+}

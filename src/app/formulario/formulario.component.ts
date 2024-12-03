@@ -1,6 +1,5 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { FormsModule } from '@angular/forms';
 import { Tarea } from '../model/tarea';
 import { ServicioService } from '../servicio.service';
@@ -9,13 +8,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
 
-
 @Component({
   selector: 'app-formulario',
   standalone: true,
-  imports: [FormsModule, MatInputModule, MatButtonModule,NgIf],
+  imports: [FormsModule, MatInputModule, MatButtonModule, NgIf],
   templateUrl: './formulario.component.html',
-  styleUrl: './formulario.component.css'
+  styleUrls: ['./formulario.component.css'] // Corrige 'styleUrl' a 'styleUrls'
 })
 export class FormularioComponent {
   tareaSvc = inject(ServicioService);
@@ -38,6 +36,7 @@ export class FormularioComponent {
   agregarTarea(): void {
     if (!this.nombre || !this.descripcion) {
       this.mensaje = 'Por favor, complete todos los campos.';
+      this.resetMensaje(); // Llamar a la función para resetear el mensaje
       return;
     }
 
@@ -52,6 +51,7 @@ export class FormularioComponent {
       catchError(err => {
         this.mensaje = 'Error al agregar la tarea';
         console.error(err);
+        this.resetMensaje(); // Llamar a la función para resetear el mensaje
         return of(null); // Manejo del error
       })
     ).subscribe(tarea => {
@@ -60,7 +60,15 @@ export class FormularioComponent {
         this.mensaje = 'Tarea agregada exitosamente';
         this.nombre = '';
         this.descripcion = '';
+        this.resetMensaje(); // Llamar a la función para resetear el mensaje
       }
     });
+  }
+
+  // Función para resetear el mensaje después de 3 segundos
+  private resetMensaje(): void {
+    setTimeout(() => {
+      this.mensaje = '';
+    }, 3000); // 3000 milisegundos = 3 segundos
   }
 }

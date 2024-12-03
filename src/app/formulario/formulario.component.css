@@ -1,49 +1,69 @@
-/* Estilo general para el contenedor del formulario */
 div {
-    max-width: 400px; /* Ancho máximo del formulario */
-    margin: 20px auto; /* Centra el formulario en la página */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
-    background-color: #ffffff; /* Fondo blanco */
-  }
-  
-  /* Estilo para el título del formulario */
-  h2 {
-    text-align: center; /* Centra el texto del título */
-    color: #3f51b5; /* Color del texto del título */
-    margin-bottom: 20px; /* Espaciado inferior */
-  }
-  
-  /* Estilo para los mensajes */
-  p {
-    text-align: center; /* Centra el texto del mensaje */
-    color: #f44336; /* Color rojo para mensajes de error */
-    font-weight: bold; /* Negrita para destacar el mensaje */
-    margin-top: 15px; /* Espaciado superior */
-  }
-  
-  /* Estilo para los campos de entrada */
-  mat-form-field {
-    width: 100%; /* Asegura que los campos ocupen todo el ancho del contenedor */
-    margin: 16px; /* Espaciado inferior entre los campos */
-  }
+  margin-top: 100px;
+  max-width: 650px; /* Ancho máximo del formulario */
+  margin: 20px auto; /* Centra el formulario en la página */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0.2, 0.5); /* Sombra para dar profundidad */
+  background-color: #ffffff; /* Fondo blanco */
+}
+
+/* Estilo para el título del formulario */
+h2 {
+  text-align: center; /* Centra el texto del título */
+  color: #3f51b5; /* Color del texto del título */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilo para los mensajes */
+p {
+  text-align: center; /* Centra el texto del mensaje */
+  color: #f44336; /* Color rojo para mensajes de error */
+  font-weight: bold; /* Negrita para destacar el mensaje */
+  margin-top: 15px; /* Espaciado superior */
+}
+
+/* Estilo para los campos de entrada */
+mat-form-field {
+  width: 100%; /* Asegura que los campos ocupen todo el ancho del contenedor */
+  margin: 16px 0; /* Espaciado vertical entre campos */
+  min-height: 64px ; /* Asegura que el campo tenga suficiente altura para evitar superposiciones */
+}
+
+/* Estilo para el label */
+.mat-form-field .mat-label {
+  transition: 0.2s ease all; /* Transición suave para el label */
+}
+
+/* Estilo para el input cuando está enfocado */
+.mat-form-field input:focus + .mat-label,
+.mat-form-field input:not(:placeholder-shown) + .mat-label {
+  transform: translateY(-20px) scale(0.75); /* Mueve el label hacia arriba al enfocar */
+  color: #3f51b5; /* Cambia el color del label al enfocar */
+}
+.mat-form-field textarea:focus + .mat-label,
+.mat-form-field textarea:not(:placeholder-shown) + .mat-label {
+  transform: translateY(-20px) scale(0.75);
+  color: #3f51b5;
+}
+
 
 /* Estilo para el botón */
 button {
-    width: 100%; /* Asegura que el botón ocupe todo el ancho del contenedor */
-    margin-top: 10px; /* Espaciado superior */
-    background-color: #000000; /* Color de fondo oscuro */
-    color: #ffffff; /* Color del texto blanco */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes redondeados */
-    padding: 10px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de fuente */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    transition: background-color 0.9s ease; /* Transición suave para el cambio de color */
-  }
-  
-  /* Efecto hover para el botón */
-  button:hover {
-    background-color: #1e88e5; /* Color azulado al pasar el mouse */
-  }
+  width: 100%; /* Asegura que el botón ocupe todo el ancho del contenedor */
+  margin-top: 10px; /* Espaciado superior */
+  background-color: #000000!important;; /* Color de fondo oscuro */
+  color: #ffffff!important;; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Efecto hover para el botón */
+button:hover {
+  background-color: #1e88e5!important;; /* Color azulado al pasar el mouse */
+}
+
