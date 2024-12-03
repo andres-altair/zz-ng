@@ -1,20 +1,27 @@
-<h2>Lista de Tareas</h2>
-<div *ngIf="mensaje">
-  <p>{{ mensaje }}</p>
-</div>
-<!-- Mensaje si no hay tareas -->
-<div *ngIf="tareas.length === 0">
-  <p>No hay tareas disponibles.</p>
-</div>
-
-<!-- Lista de tareas -->
-<ul *ngIf="tareas.length > 0">
-  <app-elemento *ngFor="let tarea of tareas" 
-                   [tarea]="tarea" 
-                (tareaEliminada)="eliminarTarea(tarea)"
-                (tareaActualizada)="actualizarTarea($event)">
-  </app-elemento>
-</ul>
 <mat-card>
-  <mat-card-content>Simple card</mat-card-content>
+  <mat-card-header>
+    <mat-card-title>Lista de Tareas</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div *ngIf="mensaje">
+      <mat-snack-bar>{{ mensaje }}</mat-snack-bar>
+    </div>
+
+    <!-- Mensaje si no hay tareas -->
+    <div *ngIf="tareas.length === 0">
+      <p>No hay tareas disponibles.</p>
+    </div>
+
+    <!-- Lista de tareas -->
+    <mat-list *ngIf="tareas.length > 0">
+      <mat-list-item *ngFor="let tarea of tareas">
+        <app-elemento 
+          [tarea]="tarea" 
+          (tareaEliminada)="eliminarTarea(tarea)"
+          (tareaActualizada)="actualizarTarea($event)">
+        </app-elemento>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
 </mat-card>

@@ -5,11 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 import { ServicioService } from '../servicio.service';
 import { ElementoComponent } from "../elemento/elemento.component";
+import {  MatSnackBar, MatSnackBarAction, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-listado',
   standalone: true,
-  imports: [FormsModule, NgFor, ElementoComponent,NgIf,MatCardModule],
+  imports: [FormsModule, NgFor, ElementoComponent,NgIf,MatCardModule,
+    MatListModule,
+    MatSnackBarModule,MatSnackBarAction],
   templateUrl: './listado.component.html',
   styleUrl: './listado.component.css'
 })
