@@ -2,12 +2,12 @@
 
 /* Estilo para el contenedor de la lista */
 mat-list {
-  background-color: #6ea367; /* Color de fondo para la lista */
+  background-color: #484848; /* Color de fondo para la lista */
   border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
-  padding: 16px; /* Espaciado interno */
+  padding: 5px; /* Espaciado interno */
   margin: 5pt auto; /* Centrar el contenedor horizontalmente */
-  width: 50%; /* Ancho del contenedor */
+  width: 70%; /* Ancho del contenedor */
 }
 
 /* Estilo para cada elemento de la lista */
@@ -39,6 +39,17 @@ mat-list-item {
   margin-bottom: 8px; /* Espaciado entre la descripción y los botones */
   text-align: left; /* Alinea el texto de la descripción a la izquierda */
   width: 100%; /* Asegura que la descripción ocupe todo el ancho */
+}
+
+
+/* Clase para tareas completadas */
+.tarea-completada {
+  background-color: #c8e6c9; /* Verde claro */
+}
+
+/* Clase para tareas pendientes */
+.tarea-pendiente {
+  background-color: #ffcdd2; /* Rojo claro */
 }
 
 /* Contenedor para los botones */

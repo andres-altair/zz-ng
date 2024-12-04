@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, model, Output } from '@angular/core';
 import { Tarea } from '../model/tarea';
 import { NgForm, NgModel } from '@angular/forms';
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
@@ -12,7 +12,8 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [NgFor,MatButtonModule,
     MatListModule,
-    MatIconModule,],
+    MatIconModule,
+  NgClass],
   templateUrl: './elemento.component.html',
   styleUrl: './elemento.component.css'
 })

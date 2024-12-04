@@ -6,12 +6,12 @@ import { ServicioService } from '../servicio.service';
 import { catchError, of } from 'rxjs';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-formulario',
   standalone: true,
-  imports: [FormsModule, MatInputModule, MatButtonModule, NgIf],
+  imports: [FormsModule, MatInputModule, MatButtonModule, NgIf,NgClass],
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css'] // Corrige 'styleUrl' a 'styleUrls'
 })

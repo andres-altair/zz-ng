@@ -59,4 +59,5 @@ export class ListadoComponent implements OnInit{
       this.tareas.push(nuevaTarea);
     });
   }
+  
 }

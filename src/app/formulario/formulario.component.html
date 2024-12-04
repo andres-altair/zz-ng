@@ -1,17 +1,24 @@
 <div>
   <h2>Agregar Tarea</h2>
   <form (ngSubmit)="agregarTarea()">
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Nombre de la tarea</mat-label>
       <input matInput [(ngModel)]="nombre" name="nombre" required />
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="full-width" >
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Descripción</mat-label>
       <textarea matInput [(ngModel)]="descripcion" name="descripcion" required></textarea>
     </mat-form-field>
-    
+
     <button mat-raised-button color="primary" type="submit">Agregar Tarea</button>
   </form>
-  <p *ngIf="mensaje">{{ mensaje }}</p>
+
+  <p *ngIf="mensaje"
+     [ngClass]="{
+       'success-message': mensaje === 'Tarea agregada exitosamente',
+       'error-message': mensaje !== 'Tarea agregada exitosamente' && mensaje !== ''
+     }">
+    {{ mensaje }}
+  </p>
 </div>
