@@ -1,22 +1,16 @@
 {
   "tareas": [
     {
-      "id": "86e8",
-      "nombre": "a",
-      "descripcion": "a",
+      "id": "0ccf",
+      "nombre": "Tarea1",
+      "descripcion": "Tarea1",
       "completada": false
     },
     {
-      "id": "824a",
-      "nombre": "h",
-      "descripcion": "hhh",
-      "completada": false
-    },
-    {
-      "id": "1658",
-      "nombre": "jm",
-      "descripcion": "ih9",
-      "completada": false
+      "id": "09ef",
+      "nombre": "tarea2",
+      "descripcion": "tarea2",
+      "completada": true
     }
   ]
 }
