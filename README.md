@@ -1,3 +1,35 @@
+# Gestión de Tareas
+
+Este es un proyecto de gestión de tareas desarrollado con Angular 18. Permite a los usuarios agregar, eliminar y actualizar tareas, así como marcar tareas como completadas. Utiliza Angular Material para una interfaz de usuario moderna y atractiva.
+
+## Características
+
+- Agregar nuevas tareas con nombre y descripción.
+- Listar tareas con estado (completada o pendiente).
+- Actualizar el estado de las tareas.
+- Eliminar tareas de la lista.
+- Mensajes de éxito y error para mejorar la experiencia del usuario.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # PruebaAng
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
