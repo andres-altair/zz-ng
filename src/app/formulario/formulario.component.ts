@@ -35,7 +35,7 @@ export class FormularioComponent {
   agregarTarea(): void {
     if (!this.nombre || !this.descripcion) {
       this.mensaje = 'Por favor, complete todos los campos.';
-      this.resetMensaje(); // Llamar a la función para resetear el mensaje
+      this.resetMensaje(); 
       return;
     }
 
@@ -50,7 +50,7 @@ export class FormularioComponent {
       catchError(err => {
         this.mensaje = 'Error al agregar la tarea';
         console.error(err);
-        this.resetMensaje(); // Llamar a la función para resetear el mensaje
+        this.resetMensaje(); 
         return of(null); // Manejo del error
       })
     ).subscribe(tarea => {
@@ -59,7 +59,7 @@ export class FormularioComponent {
         this.mensaje = 'Tarea agregada exitosamente';
         this.nombre = '';
         this.descripcion = '';
-        this.resetMensaje(); // Llamar a la función para resetear el mensaje
+        this.resetMensaje(); 
       }
     });
   }
