@@ -1,5 +1,4 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Tarea } from '../model/tarea';
 import { ServicioService } from '../servicio.service';
@@ -13,7 +12,7 @@ import { NgClass, NgIf } from '@angular/common';
   standalone: true,
   imports: [FormsModule, MatInputModule, MatButtonModule, NgIf,NgClass],
   templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.css'] // Corrige 'styleUrl' a 'styleUrls'
+  styleUrls: ['./formulario.component.css'] 
 })
 export class FormularioComponent {
   tareaSvc = inject(ServicioService);

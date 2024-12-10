@@ -41,9 +41,9 @@ export class ListadoComponent implements OnInit{
   eliminarTarea(tarea: Tarea): void {
     this.tareaService.eliminarTarea(tarea.id).subscribe(() => {
       this.tareas = this.tareas.filter(t => t.id !== tarea.id);
-      this.mensaje = `Eliminando "${tarea.nombre}" correctamente.`; // Usa el nombre de la tarea
+      this.mensaje = `Eliminado "${tarea.nombre}" correctamente.`; 
       setTimeout(() => {
-        this.mensaje = ''; // Limpia el mensaje después de 3 segundos
+        this.mensaje = ''; 
       }, 3000);
     });
   }
@@ -54,10 +54,6 @@ export class ListadoComponent implements OnInit{
     this.tareaService.actualizarTarea(tarea).subscribe();
   }
 
-  agregarTarea(tarea: Tarea): void {
-    this.tareaService.agregarTarea(tarea).subscribe(nuevaTarea => {
-      this.tareas.push(nuevaTarea);
-    });
-  }
+  
   
 }

@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, model, Output } from '@angular/core';
 import { Tarea } from '../model/tarea';
-import { NgForm, NgModel } from '@angular/forms';
 import { NgClass, NgFor } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
@@ -10,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-elemento',
   standalone: true,
-  imports: [NgFor,MatButtonModule,
+  imports: [MatButtonModule,
     MatListModule,
     MatIconModule,
   NgClass],

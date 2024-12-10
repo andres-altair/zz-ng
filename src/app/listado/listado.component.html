@@ -14,7 +14,7 @@
       <mat-list-item *ngFor="let tarea of tareas">
         <app-elemento
           [tarea]="tarea"
-          (tareaEliminada)="eliminarTarea(tarea)"
+          (tareaEliminada)="eliminarTarea($event)"
           (tareaActualizada)="actualizarTarea($event)">
         </app-elemento>
       </mat-list-item>

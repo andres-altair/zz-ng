@@ -1,38 +1,38 @@
 div {
   margin-top: 100px;
-  max-width: 650px; /* Ancho máximo del formulario */
+  max-width: 650px; 
   margin: 20px auto; /* Centra el formulario en la página */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; 
+  border-radius: 8px; 
   box-shadow: 0 2px 10px rgba(0, 0, 0.2, 0.5); /* Sombra para dar profundidad */
-  background-color: #ffffff; /* Fondo blanco */
+  background-color: #ffffff; 
 }
 
 /* Estilo para el título del formulario */
 h2 {
-  text-align: center; /* Centra el texto del título */
-  color: #3f51b5; /* Color del texto del título */
-  margin-bottom: 20px; /* Espaciado inferior */
+  text-align: center; 
+  color: #3f51b5; 
+  margin-bottom: 20px; 
 }
 
 /* Estilo para los mensajes */
 p {
-  text-align: center; /* Centra el texto del mensaje */
-  color: #f44336; /* Color rojo para mensajes de error */
-  font-weight: bold; /* Negrita para destacar el mensaje */
-  margin-top: 15px; /* Espaciado superior */
+  text-align: center; 
+  color: #f44336; 
+  font-weight: bold; 
+  margin-top: 15px; 
 }
 
 /* Estilo para los campos de entrada */
 mat-form-field {
-  width: 100%; /* Asegura que los campos ocupen todo el ancho del contenedor */
+  width: 100%; 
   margin: 16px 0; /* Espaciado vertical entre campos */
   min-height: 64px ; /* Asegura que el campo tenga suficiente altura para evitar superposiciones */
 }
 
 /* Estilo para el label */
 .mat-form-field .mat-label {
-  transition: 0.2s ease all; /* Transición suave para el label */
+  transition: 0.2s ease all; 
 }
 
 /* Estilo para el input cuando está enfocado */
@@ -41,43 +41,39 @@ mat-form-field {
   transform: translateY(-20px) scale(0.75); /* Mueve el label hacia arriba al enfocar */
   color: #3f51b5; /* Cambia el color del label al enfocar */
 }
-.mat-form-field textarea:focus + .mat-label,
-.mat-form-field textarea:not(:placeholder-shown) + .mat-label {
-  transform: translateY(-20px) scale(0.75);
-  color: #3f51b5;
-}
+
 
 /* formulario.component.css */
 .success-message {
-  color: green; /* Color verde para mensajes de éxito */
-  font-weight: bold; /* Opcional: hace que el texto sea negrita */
+  color: green; 
+  font-weight: bold; 
   text-align: center; /* Centra el texto */
-  margin-top: 20px; /* Espaciado superior */
+  margin-top: 20px; 
 }
 
 .error-message {
-  color: red; /* Color rojo para mensajes de error */
-  font-weight: bold; /* Opcional: hace que el texto sea negrita */
-  text-align: center; /* Centra el texto */
-  margin-top: 20px; /* Espaciado superior */
+  color: red; 
+  font-weight: bold; 
+  text-align: center; 
+  margin-top: 20px; 
 }
 
 /* Estilo para el botón */
 button {
-  width: 100%; /* Asegura que el botón ocupe todo el ancho del contenedor */
-  margin-top: 10px; /* Espaciado superior */
-  background-color: #000000!important;; /* Color de fondo oscuro */
-  color: #ffffff!important;; /* Color del texto blanco */
-  border: none; /* Sin borde */
-  border-radius: 4px; /* Bordes redondeados */
-  padding: 10px; /* Espaciado interno */
-  font-size: 16px; /* Tamaño de fuente */
+  width: 100%; 
+  margin-top: 10px; 
+  background-color: #000000!important;
+  color: #ffffff!important;
+  border: none; 
+  border-radius: 4px; 
+  padding: 10px; 
+  font-size: 16px; 
   cursor: pointer; /* Cambia el cursor al pasar el mouse */
   transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
 }
 
 /* Efecto hover para el botón */
 button:hover {
-  background-color: #1e88e5!important;; /* Color azulado al pasar el mouse */
+  background-color: #1e88e5!important;
 }
 

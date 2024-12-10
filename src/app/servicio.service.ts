@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ServicioService {
-  private url = 'http://localhost:3000/tareas'; // Cambia a la ruta correcta
+  private url = 'http://localhost:3000/tareas'; 
 
 
   private http = inject(HttpClient);

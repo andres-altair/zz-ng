@@ -1,9 +1,12 @@
-<mat-toolbar color="primary">
-  <span class="spacer"></span>
-  <div class="nav-links">
-    <a mat-button routerLink="/crear" routerLinkActive="router-link-active">Crear Formulario</a>
-    <a mat-button [routerLink]="['/listado']" routerLinkActive="router-link-active">Listado de Formularios</a>
-  </div>
-</mat-toolbar>
 
-<router-outlet></router-outlet>
+  <mat-toolbar color="primary">
+    <span class="spacer"></span>
+    <div class="nav-links">
+      <a mat-button [routerLink]="['/crear']" routerLinkActive="router-link-active">Crear Formulario</a>
+      <a mat-button [routerLink]="['/listado']" routerLinkActive="router-link-active">Listado de Formularios</a>
+    </div>
+  </mat-toolbar>
+  
+  <router-outlet></router-outlet>
+  
+
